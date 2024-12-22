@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar app>
+    <!-- <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
         <span class="font-weight-light">MATERIAL DESIGN</span>
@@ -14,10 +14,11 @@
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-toolbar> -->
 
     <v-content>
-      <HelloWorld/>
+      <router-view/>
+      <!-- <HelloWorld/> -->
     </v-content>
   </v-app>
 </template>
