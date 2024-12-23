@@ -1,20 +1,16 @@
 <template>
   <v-app>
-    <!-- <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-toolbar> -->
+    <v-toolbar color="lime">
+      <v-toolbar-side-icon/> <!-- 햄버거 아이콘 -->
+      <v-toolbar-title>Title</v-toolbar-title>
+      <v-spacer><!-- 공간 차지 --></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down"> <!-- display helper: sm보다 작아지면 hidden -->
+        <v-btn flat>Link One</v-btn> <!-- flat: 버튼 모양 제거 -->
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
 
     <v-content>
       <router-view/>
