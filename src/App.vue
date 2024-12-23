@@ -1,11 +1,15 @@
 <template>
   <v-app>
+    <v-navigation-drawer v-model="drawer" fixed>
+      abcde
+    </v-navigation-drawer>
     <v-toolbar color="lime">
-      <v-toolbar-side-icon/> <!-- 햄버거 아이콘 -->
+      <v-toolbar-side-icon @click="test"/> <!-- 햄버거 아이콘 -->
       <v-toolbar-title>Title</v-toolbar-title>
       <v-spacer><!-- 공간 차지 --></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down"> <!-- display helper: sm보다 작아지면 hidden -->
-        <v-btn flat>Link One</v-btn> <!-- flat: 버튼 모양 제거 -->
+      <!-- <v-toolbar-items class="hidden-sm-and-down"> --> <!-- display helper: sm보다 작아지면 hidden -->
+      <v-toolbar-items> <!-- display helper: sm보다 작아지면 hidden -->
+        <!-- <v-btn flat>Link One</v-btn> --> <!-- flat: 버튼 모양 제거 -->
         <v-btn icon>
           <v-icon>mdi-dots-vertical</v-icon>
         </v-btn>
@@ -29,7 +33,12 @@ export default {
   },
   data () {
     return {
-      //
+      drawer: false
+    }
+  },
+  methods: {
+    test () {
+      this.drawer = !this.drawer
     }
   }
 }
