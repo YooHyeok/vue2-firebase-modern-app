@@ -9,7 +9,7 @@
     <v-alert type="primary" :value="true" v-for="value in 5" :key="value">
       abcde {{ value }}
     </v-alert>
-    <v-alert type="primary" :value="true" v-for="(value, index) in array" :key="index">
+    <v-alert type="primary" :value="true" v-for="(value, index) in array" :key="value">
       abcde {{ value }}
     </v-alert>
   </div>
