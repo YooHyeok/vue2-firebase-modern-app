@@ -2,7 +2,7 @@
   <v-app>
     <v-navigation-drawer v-model="drawer" fixed>
       <v-list two-line>
-        <v-list-tile v-for="item in items" :key="item.title">
+        <v-list-tile v-for="item in items" :key="item.title" :to="item.to">
           <v-list-tile-avatar>
             <v-icon>{{item.icon}}</v-icon>
           </v-list-tile-avatar>
@@ -19,7 +19,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar color="lime">
-      <v-toolbar-side-icon @click="test"/> <!-- 햄버거 아이콘 -->
+      <v-toolbar-side-icon @click="drawer = !drawer"/> <!-- 햄버거 아이콘 -->
       <v-toolbar-title>Title</v-toolbar-title>
       <v-spacer><!-- 공간 차지 --></v-spacer>
       <!-- <v-toolbar-items class="hidden-sm-and-down"> --> <!-- display helper: sm보다 작아지면 hidden -->
@@ -50,9 +50,9 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'title1', icon: 'mdi-alert' },
-        { title: 'title2', icon: 'mdi-alert-box' },
-        { title: 'title3', icon: 'mdi-alert-circle' }
+        { title: 'title1', icon: 'mdi-alert', to: '/' },
+        { title: 'title2', icon: 'mdi-alert-box', to: '/about2' },
+        { title: 'title3', icon: 'mdi-alert-circle', to: '/about' }
       ]
     }
   },
