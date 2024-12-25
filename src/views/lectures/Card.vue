@@ -1,17 +1,22 @@
 <template>
-  <v-layout>
+  <v-layout class="ma-4">
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
-        <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
-            <div> {{ card_text }} </div>
-          </div>
-        </v-card-title>
+        <v-toolbar color="primary" dark flat>
+          <v-toolbar-title>here</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" icon>
+            <v-icon>mdi-arrange-bring-forward</v-icon>
+          </v-btn>
+        </v-toolbar>
+        <v-divider></v-divider>
+        <v-card-text>
+          {{ card_text }}
+        </v-card-text>
         <v-card-actions>
-          <v-btn color="orange" flat>SHARE</v-btn>
-          <v-btn color="orange" flat>EXPLORE</v-btn>
+          <v-spacer><!-- 여백 --></v-spacer>
+          <v-btn color="primary" flat>CLICK</v-btn>
+          <v-btn color="primary" flat>CLICK</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
