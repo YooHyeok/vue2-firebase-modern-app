@@ -23,6 +23,10 @@ const routes = [
     component: () => import('../views/About2.vue')
   },
   {
+    path: '/lectures/card',
+    component: () => import('../views/lectures/Card.vue')
+  },
+  {
     path: '*',
     component: () => import('../views/e404.vue')
   }
