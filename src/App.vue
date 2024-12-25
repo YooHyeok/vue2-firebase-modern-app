@@ -21,6 +21,11 @@
               </v-list-tile-content>
             </v-list-tile>
           </template>
+          <v-list-tile v-for="subitem in item.subItems" :key="subitem.title" :to="subitem.to">
+            <v-list-tile-content>
+              <v-list-tile-title >{{ subitem.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
         </v-list-group>
         <!-- <v-list-tile v-for="item in items" :key="item.title" :to="item.to">
           <v-list-tile-avatar>
@@ -70,9 +75,9 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'Home', icon: 'mdi-alert', active: true },
-        { title: 'Lectures', icon: 'mdi-alert-box', active: false },
-        { title: 'title3', icon: 'mdi-alert-circle', active: false }
+        { title: 'Home', icon: 'mdi-alert', active: true, subItems: [{ title: 'dashboard', to: '/' }, { title: 'About2', to: '/about2' }] },
+        { title: 'Lectures', icon: 'mdi-alert-box', active: false, subItems: [{ title: 'card', to: '/lectures/card' }, { title: 'layout', to: '/lectures/layout' }] }
+        // { title: 'title3', icon: 'mdi-alert-circle', active: false }
       ]
     }
   },
