@@ -22,11 +22,15 @@
       <template v-slot:item="props">
         <v-flex xs12 sm md4 lg3>
           <v-card>
-              <v-card-title><h4>{{ props.item.title }}</h4></v-card-title>
-              <v-divider></v-divider>
-              <v-card-text>
-                {{ props.item.content }}
-              </v-card-text>
+            <v-card-title><h4>{{ props.item.title }}</h4></v-card-title>
+            <v-divider></v-divider>
+            <v-card-text>
+              {{ props.item.content }}
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn @click="put(props.item)">put</v-btn>
+            </v-card-actions>
           </v-card>
         </v-flex>
       </template>
@@ -58,7 +62,7 @@ export default {
     get () {
 
     },
-    update () {
+    put () {
 
     },
     delete () {
