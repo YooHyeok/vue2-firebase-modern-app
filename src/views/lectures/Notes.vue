@@ -19,14 +19,14 @@
       row
       wrap
     > <!-- pagenation의 경우 rowsPerPage, descending, page, sortBy, totalItems 등의 속성들이 자동으로 할당된다. -->
-    <template v-slot:item="props">
-      <v-flex xs12 sm md4 lg3>
-        <v-card>
-            <v-card-title><h4>{{ props.item.title }}</h4></v-card-title>
-            <v-divider></v-divider>
-            <v-card-text>
-              {{ props.item.content }}
-            </v-card-text>
+      <template v-slot:item="props">
+        <v-flex xs12 sm md4 lg3>
+          <v-card>
+              <v-card-title><h4>{{ props.item.title }}</h4></v-card-title>
+              <v-divider></v-divider>
+              <v-card-text>
+                {{ props.item.content }}
+              </v-card-text>
           </v-card>
         </v-flex>
       </template>
