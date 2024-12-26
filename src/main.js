@@ -3,10 +3,18 @@ import './plugins/vuetify'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import promiseAsnyc from './plugins/module/promise-async'
+import promiseSync from './plugins/module/promise-sync'
+import promiseAsync from './plugins/module/promise-async'
 
 Vue.config.productionTip = false
-promiseAsnyc.foo()
+promiseAsync.foo()
+promiseSync.foo()
+  .then((result) => {
+    console.log(result) // 각 Promise가 완료된 후에 실행됨
+  })
+  .catch((error) => {
+    console.log(error)
+  })
 
 new Vue({
   router,
