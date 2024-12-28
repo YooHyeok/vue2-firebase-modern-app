@@ -302,6 +302,83 @@ b. 프로젝트 초기화
 </details>
 <br>
 
+# *Firebase 데이터베이스 FireStore 설정*
+<details>
+<summary>상세보기</summary>
+<br>
+
+Firebase에는 Realtime과 FireStore라는 두개의 NoSQL 데이터베이스가 있다.
+Database와 Storage등을 접근하기 위해서는 Init Code가 필요하다.
+
+- 프로젝트 개요(Project Overview) > 프로젝트 설정(Settings) > 내 앱 </>(웹) 선택
+- 웹 앱에 Firebase 추가
+  1. 앱 등록  
+    - 앱 닉네임 입력  
+    - [x] 또한 이 앱의 Firebase 호스팅을 설정하세요 - 체크
+    - [앱등록] 버튼 클릭
+  2. Firebase SDK 추가
+  3. Firebase cLI 설치
+  4. Firebase 호스팅에 배포
+- Firebase 초기화
+  ```bash
+  firebase init
+  ```
+  ```text/plain
+  ? Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. (Press <space> to select, 
+  <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+   ( ) Data Connect: Set up a Firebase Data Connect service
+  >(*) Firestore: Configure security rules and indexes files for Firestore
+   ( ) Genkit: Setup a new Genkit project with Firebase
+   ( ) Functions: Configure a Cloud Functions directory and its files
+   ( ) App Hosting: Configure an apphosting.yaml file for App Hosting
+  >(*) Hosting: Configure files for Firebase Hosting and (optionally) set up   GitHub Action deploys
+   ( ) Storage: Configure a security rules file for Cloud Storage
+   ( ) Emulators: Set up local emulators for Firebase products
+   ( ) Remote Config: Configure a template file for Remote Config
+   (Move up and down to reveal more choices)
+  ```
+
+  ```text/plain
+  Error: It looks like you haven't used Cloud Firestore in this project before. Go to https://console.firebase.google.com/project/vue2-modern-app/firestore to create your Cloud Firestore database.
+  ```
+  
+  위 에러는 Firestore를 사용한 적이 없기 때문에 발생하므로 Firebase 데이터베이스를 만든다.
+  1. 좌측 사이드바 > 빌드 > Firebase Database 선택 > 데이터베이스 만들기
+  2. 위치: asia-northeast3(seoul) 선택 > [다음]
+  3. 테스트 모드에서 시작 > [만들기]
+
+  - firebase init 재시도
+    ```text/plain
+    ? Please select an option:
+    > Use an existing project
+      Create a new project
+      Add Firebase to an existing Google Cloud Platform project
+      Don't set up a default project
+    ```
+    ```text/plain
+    ? Please select an option: Use an existing project
+    ? Select a default Firebase project for this directory:
+      프로젝트1
+    > 프로젝트2
+    ```
+    ```text/plain
+    ? What file should be used for Firestore Rules? firestore.rules
+    ```
+    ```text/plain
+    ? What file should be used for Firestore indexes? firestore.indexes.json
+    ```
+    ```text/plain
+    ? What do you want to use as your public directory? dist
+    ```
+    ```text/plain
+    ? Configure as a single-page app (rewrite all urls to /index.html)? No
+    ```
+    ```text/plain
+    ? File dist/index.html already exists. Overwrite? No
+    ```
+</details>
+<br>
+
 # *템플릿*
 <details>
 <summary>상세보기</summary>
